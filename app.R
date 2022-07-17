@@ -1,49 +1,43 @@
-# 
-# This is a Shiny web application. You can run the application by clicking
-# the 'Run App' button above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
+# Visualization using R shiny
 
 library(shiny)
+library(DT)
 
-# Define UI for application that draws a histogram
+#data
+
+args = commandArgs(trailingOnly=TRUE)
+tax_table <- read.csv(paste("./",args[1],sep=""), header=T)
+count_table <- read.csv(paste("./",args[2],sep=""), header=T)
+metadata <- read.csv(paste("./",args[3],sep=""), header=T)
+
+# tax_table <- read.csv("./tax_table.csv", header=T)
+# count_table <- read.csv("./count_table.csv", header=T)
+# metadata <- read.csv("./metadata.csv", header=T)
+
+
 ui <- fluidPage(
-
-    # Application title
-    titlePanel("Old Faithful Geyser Data"),
-
-    # Sidebar with a slider input for number of bins 
-    sidebarLayout(
-        sidebarPanel(
-            sliderInput("bins",
-                        "Number of bins:",
-                        min = 1,
-                        max = 50,
-                        value = 30)
-        ),
-
-        # Show a plot of the generated distribution
-        mainPanel(
-           plotOutput("distPlot")
-        )
-    )
+  titlePanel("proBiome Suite"),
+  br(),
+  mainPanel(
+    dataTableOutput("table1"),
+    br(),
+    dataTableOutput("table2"),
+    br(),
+    dataTableOutput("table3")
+  )
 )
 
-# Define server logic required to draw a histogram
-server <- function(input, output) {
-
-    output$distPlot <- renderPlot({
-        # generate bins based on input$bins from ui.R
-        x    <- faithful[, 2]
-        bins <- seq(min(x), max(x), length.out = input$bins + 1)
-
-        # draw the histogram with the specified number of bins
-        hist(x, breaks = bins, col = 'darkgray', border = 'white')
-    })
+server <- function (input,output){
+  output$table1 <- renderDataTable(
+    datatable(metadata)
+  )
+  output$table2 <- renderDataTable(
+    datatable(tax_table)
+  )
+  output$table3 <- renderDataTable(
+    datatable(count_table)
+  )
 }
 
-# Run the application 
 shinyApp(ui = ui, server = server)
+
