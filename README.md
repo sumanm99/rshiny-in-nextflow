@@ -1,17 +1,16 @@
-# biolizard-project-template
-:tada: Congratulations on creating a new repository from the project template! :tada: 
+# Suman Internship - Microbiomics, proBiome Suite
 
-Currently we are quite flexible how you organise your repositories, but they should adhere to the following:
+This folder contains the scripts for the visualisation of the microbiome data. 
+### app.R
 
-## 1. A clear README.md file
-Replace this README.md file with a clear descriptive file that contains information about:
+An RShiny application for the visualisation of the input tables.
 
-- What the project does
-- Why the project is useful
-- How users can get started with the project
-- Where users can get help with your project
+**Input:**
+- .csv files - metadata, tax_table and count_table provided via CLI.
 
+**Output:**
+- An RShiny app that launches and displays the input tables.
 
-## 2. Read up on our Github Flow & Best Practices before you start working
-
-These are available on our [Notion](https://www.notion.so/biolizard/GitHub-4b6906e26c9a4cf78b4578f925e56f40) page
+**Running R shiny app from PowerShell:**
+- cd to the folder containing "app.R"
+- `Rscript -e 'shiny::runApp(launch.browser=T)' tax_table.csv count_table.csv metadata.csv`
