@@ -14,3 +14,14 @@ An RShiny application for the visualisation of the input tables.
 **Running R shiny app from PowerShell:**
 - cd to the folder containing "app.R"
 - `Rscript -e 'shiny::runApp(launch.browser=T)' tax_table.csv count_table.csv metadata.csv`
+
+### Dockerfile
+
+This Dockerfile is used to build a docker image to run app.R.
+
+**Requirements:**
+- app.R
+
+**Docker image - build and run:**
+- `docker build -t image-name:tag`
+- `docker run --rm -p 3838:3838 image-name:tag`
