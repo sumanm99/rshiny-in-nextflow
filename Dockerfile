@@ -6,13 +6,14 @@ RUN apt-get update && apt-get install -y \
 
 RUN R -e 'install.packages(c(\
               "shiny", \
+              "rsconnect", \
               "DT" \
             ), \
             repos="https://packagemanager.rstudio.com/cran/__linux__/focal/2021-04-23"\
           )'
 
-EXPOSE 3838
+RUN mkdir -p /app
 
-COPY . /srv/shiny-server/
+COPY . /app/
 
-CMD ["/usr/bin/shiny-server"]
+CMD ["/bin/bash","-c","/app/deploy.sh"]

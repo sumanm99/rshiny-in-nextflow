@@ -3,11 +3,6 @@ nextflow.enable.dsl=2
 
 params.script ="$baseDir"
 
-//params.input = "$launchDir/*.csv"
-
-// Create channel
-//reads_ch = Channel.from(params.input)
-
 // Define the process
 process RShiny {
 
@@ -17,16 +12,17 @@ process RShiny {
     script:
     """
     echo "${params.script}"
-    Rscript -e 'shiny::runApp("${params.script}",launch.browser=T)'
-
+    #docker run --rm -v ${params.script}/data:/app/data suman20/suman-internship-biolizard
+    docker run --rm -v ${params.script}/data:/app/data my-rshiny-app:rsconnect
     """
-    // Rscript -e "rmarkdown::render('${PWD}/app.Rmd')"
-    //Rscript -e 'shiny::runApp(launch.browser=T)' ${read}
+    //docker run --rm -v ${PWD}/data:/app/data suman20/suman-internship-biolizard
 }
 
-//cp -L ${PWD}/app.Rmd  app.Rmd
-
 workflow{
-    //RShiny(reads_ch)
     RShiny(params.script)
+}
+
+workflow.onComplete {
+    //println "Pipeline completed at: $workflow.complete"
+    println "Execution status: ${ workflow.success ? 'App deployed at https://suman-muralidharan.shinyapps.io/rshiny-in-nextflow' : 'Failed to deploy the application' }"
 }
