@@ -4,6 +4,7 @@ options(shiny.port=3838)
 
 library(shiny)
 library(DT)
+library(shinyWidgets)
 
 
 #data
