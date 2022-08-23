@@ -4,14 +4,7 @@ RUN apt-get update && apt-get install -y \
     libcurl4-gnutls-dev \
     libssl-dev
 
-RUN R -e 'install.packages(c(\
-              "shiny", \
-              "rsconnect", \
-	      "shinyWidgets", \
-              "DT" \
-            ), \
-            repos="https://packagemanager.rstudio.com/cran/__linux__/focal/2021-04-23"\
-          )'
+RUN R -e 'install.packages(c("shiny", "rsconnect", "DT", "shinyWidgets"), repos="https://packagemanager.rstudio.com/cran/__linux__/focal/2021-04-23")'
 
 RUN mkdir -p /app
 

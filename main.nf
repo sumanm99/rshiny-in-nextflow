@@ -12,8 +12,7 @@ process RShiny {
     script:
     """
     echo "${params.script}"
-    #docker run --rm -v ${params.script}/data:/app/data suman20/suman-internship-biolizard
-    docker run --rm -v ${params.script}/data:/app/data my-rshiny-app:rsconnect
+    docker run --rm -v ${params.script}/data:/app/data suman20/suman-internship-biolizard
     """
     //docker run --rm -v ${PWD}/data:/app/data suman20/suman-internship-biolizard
 }
@@ -23,6 +22,5 @@ workflow{
 }
 
 workflow.onComplete {
-    //println "Pipeline completed at: $workflow.complete"
     println "Execution status: ${ workflow.success ? 'App deployed at https://suman-muralidharan.shinyapps.io/rshiny-in-nextflow' : 'Failed to deploy the application' }"
 }
