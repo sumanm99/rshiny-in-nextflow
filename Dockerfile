@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y \
 RUN R -e 'install.packages(c(\
               "shiny", \
               "rsconnect", \
+	      "shinyWidgets", \
               "DT" \
             ), \
             repos="https://packagemanager.rstudio.com/cran/__linux__/focal/2021-04-23"\
