@@ -17,14 +17,18 @@ An RShiny application for the visualisation of the input tables.
 
 ### Dockerfile
 
-This Dockerfile is used to build a docker image to run app.R.
+This Dockerfile is used to build a docker image to deploy app.R onto the shiny server https://www.shinyapps.io/.
 
 **Requirements:**
 - app.R
+- deploy.sh
 - The input csv files named "metadata", "count_table" and "tax_table" in a folder say "data"
 
 **Docker image - build and run:**
 - `docker build -t image-name:tag`
-- `docker run --rm -v $(pwd)/data:/srv/shiny-server/data -p 3838:3838 image-name:tag`
+- `docker run --rm -v $(pwd)/data:/app/data image-name:tag`
 
 **The image is published on docker hub and can be pulled as `docker pull suman20/suman-internship-biolizard`**
+
+### main.nf
+
