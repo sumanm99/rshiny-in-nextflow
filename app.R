@@ -42,7 +42,7 @@ ui <- fluidPage(
       )
     ),
     tabPanel(
-      "Taxonomy assignments", icon=icon("chart-bar"),
+      "Taxonomy assignments", icon=icon("chart-bar"), #icon("chart-column) while running in RStudio
       # HTML('<p> <style="font-size: 15pt; class="fa">&#xf080 Taxonomy assignments</p>'),
       mainPanel(
         tabsetPanel(type="tabs",
