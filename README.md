@@ -49,4 +49,4 @@ providers {
 ```  
 
 **Running main.nf from CLI:**
-- `nextflow run https://github.com/lizard-bio/rshiny-in-nextflow -r master -with-docker`
+- `nextflow run https://github.com/lizard-bio/rshiny-in-nextflow -r master`
