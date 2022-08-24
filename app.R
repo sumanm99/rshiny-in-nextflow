@@ -9,6 +9,11 @@ library(shinyWidgets)
 
 #data
 
+# args = commandArgs(trailingOnly=TRUE)
+# tax_table <- read.csv(paste("./",args[1],sep=""), header=T)
+# count_table <- read.csv(paste("./",args[2],sep=""), header=T)
+# metadata <- read.csv(paste("./",args[3],sep=""), header=T)
+
 tax_table <- read.csv("./data/tax_table.csv", header=T)
 count_table <- read.csv("./data/count_table.csv", header=T)
 metadata <- read.csv("./data/metadata.csv", header=T)
