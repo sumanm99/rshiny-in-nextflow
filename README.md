@@ -32,3 +32,21 @@ This Dockerfile is used to build a docker image to deploy app.R onto the shiny s
 
 ### main.nf
 
+A nextflow pipeline to run the docker image that deploys app.R onto the shiny server.
+
+**Requirements:**
+- nextflow.config
+- The input csv files named "metadata", "count_table" and "tax_table" in a folder named "data"
+- Create scm file in ./nextflow folder of the linux home directory  
+```	
+providers {  
+	   github {  
+	       user = 'username'  
+	       platform = 'github'  
+	       password = 'password/PAT'  
+	   }  
+	}
+```  
+
+**Running main.nf from CLI:**
+- `nextflow run https://github.com/lizard-bio/rshiny-in-nextflow -r master -with-docker`
