@@ -1,0 +1,76 @@
+Aug-24 10:06:49.966 [main] DEBUG nextflow.cli.Launcher - $> nextflow run 'https://github.com/lizard-bio/rshiny-in-nextflow' -r master
+Aug-24 10:06:50.563 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 22.04.5
+Aug-24 10:06:53.695 [main] DEBUG nextflow.scm.AssetManager - Repository URL: https://github.com/lizard-bio/rshiny-in-nextflow; Project: lizard-bio/rshiny-in-nextflow; Hub provider: github
+Aug-24 10:06:53.852 [main] DEBUG nextflow.scm.AssetManager - Git config: /home/suman/.nextflow/assets/lizard-bio/rshiny-in-nextflow/.git/config; branch: master; remote: origin; url: https://github.com/lizard-bio/rshiny-in-nextflow.git
+Aug-24 10:07:01.893 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /home/suman/.nextflow/assets/lizard-bio/rshiny-in-nextflow/nextflow.config
+Aug-24 10:07:01.912 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /mnt/d/Ghent_University_notes/Internship/rshiny-in-nextflow/nextflow.config
+Aug-24 10:07:01.918 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/suman/.nextflow/assets/lizard-bio/rshiny-in-nextflow/nextflow.config
+Aug-24 10:07:01.924 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /mnt/d/Ghent_University_notes/Internship/rshiny-in-nextflow/nextflow.config
+Aug-24 10:07:02.059 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Aug-24 10:07:02.195 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Aug-24 10:07:02.378 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Aug-24 10:07:02.385 [main] INFO  nextflow.cli.CmdRun - Launching `https://github.com/lizard-bio/rshiny-in-nextflow` [sick_ptolemy] DSL2 - revision: 89abd1648a [master]
+Aug-24 10:07:02.462 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/suman/.nextflow/plugins; core-plugins: nf-amazon@1.7.2,nf-azure@0.13.2,nf-console@1.0.3,nf-ga4gh@1.0.3,nf-google@1.1.4,nf-sqldb@0.4.0,nf-tower@1.4.0
+Aug-24 10:07:02.471 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Aug-24 10:07:02.598 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Aug-24 10:07:02.607 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Aug-24 10:07:02.622 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Aug-24 10:07:02.697 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Aug-24 10:07:02.963 [main] DEBUG nextflow.Session - Session uuid: 28470793-e900-4125-b6ba-ef9c2195c091
+Aug-24 10:07:02.965 [main] DEBUG nextflow.Session - Run name: sick_ptolemy
+Aug-24 10:07:02.968 [main] DEBUG nextflow.Session - Executor pool size: 8
+Aug-24 10:07:03.292 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 22.04.5 build 5708
+  Created: 15-07-2022 16:09 UTC (21:39 IDT)
+  System: Linux 5.10.102.1-microsoft-standard-WSL2
+  Runtime: Groovy 3.0.10 on OpenJDK 64-Bit Server VM 11.0.16+8-post-Debian-1deb11u1
+  Encoding: UTF-8 (UTF-8)
+  Process: 6860@DESKTOP-FCL0U3R [127.0.1.1]
+  CPUs: 8 - Mem: 3.7 GB (520.8 MB) - Swap: 1 GB (1 GB)
+Aug-24 10:07:03.420 [main] DEBUG nextflow.Session - Work-dir: /mnt/d/Ghent_University_notes/Internship/rshiny-in-nextflow/work [v9fs]
+Aug-24 10:07:03.422 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/suman/.nextflow/assets/lizard-bio/rshiny-in-nextflow/bin
+Aug-24 10:07:03.477 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Aug-24 10:07:03.522 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Aug-24 10:07:03.646 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Aug-24 10:07:03.688 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Aug-24 10:07:04.145 [main] DEBUG nextflow.Session - Session start invoked
+Aug-24 10:07:05.422 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Aug-24 10:07:05.753 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-24 10:07:05.755 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-24 10:07:05.774 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Aug-24 10:07:05.799 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=3.7 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Aug-24 10:07:06.518 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: RShiny
+Aug-24 10:07:06.523 [main] DEBUG nextflow.Session - Ignite dataflow network (1)
+Aug-24 10:07:06.529 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > RShiny
+Aug-24 10:07:06.537 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Aug-24 10:07:06.549 [main] DEBUG nextflow.Session - Session await
+Aug-24 10:07:07.500 [Actor Thread 3] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /home/suman/.nextflow/assets/lizard-bio/rshiny-in-nextflow/data/tax_table.csv
+Aug-24 10:07:07.538 [Actor Thread 3] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /home/suman/.nextflow/assets/lizard-bio/rshiny-in-nextflow/data/metadata.csv
+Aug-24 10:07:07.542 [Actor Thread 3] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /home/suman/.nextflow/assets/lizard-bio/rshiny-in-nextflow/data/count_table.csv
+Aug-24 10:07:07.548 [Actor Thread 3] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /home/suman/.nextflow/assets/lizard-bio/rshiny-in-nextflow/README.md
+Aug-24 10:07:07.552 [Actor Thread 3] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /home/suman/.nextflow/assets/lizard-bio/rshiny-in-nextflow/.git/index
+Aug-24 10:07:07.555 [Actor Thread 3] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /home/suman/.nextflow/assets/lizard-bio/rshiny-in-nextflow/.git/HEAD
+Aug-24 10:07:07.560 [Actor Thread 3] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /home/suman/.nextflow/assets/lizard-bio/rshiny-in-nextflow/.git/packed-refs
+Aug-24 10:07:07.562 [Actor Thread 3] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /home/suman/.nextflow/assets/lizard-bio/rshiny-in-nextflow/.git/config
+Aug-24 10:07:07.566 [Actor Thread 3] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /home/suman/.nextflow/assets/lizard-bio/rshiny-in-nextflow/.git/FETCH_HEAD
+Aug-24 10:07:07.572 [Actor Thread 3] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /home/suman/.nextflow/assets/lizard-bio/rshiny-in-nextflow/.git/objects/pack/pack-9c7d210464806e40d32c5e8815b192120113b517.pack
+Aug-24 10:07:07.577 [Actor Thread 3] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /home/suman/.nextflow/assets/lizard-bio/rshiny-in-nextflow/.git/objects/pack/pack-9c7d210464806e40d32c5e8815b192120113b517.idx
+Aug-24 10:07:07.585 [Actor Thread 3] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /home/suman/.nextflow/assets/lizard-bio/rshiny-in-nextflow/.git/refs/heads/master
+Aug-24 10:07:07.589 [Actor Thread 3] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /home/suman/.nextflow/assets/lizard-bio/rshiny-in-nextflow/.git/logs/HEAD
+Aug-24 10:07:07.599 [Actor Thread 3] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /home/suman/.nextflow/assets/lizard-bio/rshiny-in-nextflow/.git/logs/refs/remotes/origin/master
+Aug-24 10:07:07.606 [Actor Thread 3] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /home/suman/.nextflow/assets/lizard-bio/rshiny-in-nextflow/.git/logs/refs/remotes/origin/playground
+Aug-24 10:07:07.609 [Actor Thread 3] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /home/suman/.nextflow/assets/lizard-bio/rshiny-in-nextflow/.git/logs/refs/heads/master
+Aug-24 10:07:07.613 [Actor Thread 3] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /home/suman/.nextflow/assets/lizard-bio/rshiny-in-nextflow/main.nf
+Aug-24 10:07:07.615 [Actor Thread 3] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /home/suman/.nextflow/assets/lizard-bio/rshiny-in-nextflow/app.R
+Aug-24 10:07:07.618 [Actor Thread 3] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /home/suman/.nextflow/assets/lizard-bio/rshiny-in-nextflow/nextflow.config
+Aug-24 10:07:07.621 [Actor Thread 3] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /home/suman/.nextflow/assets/lizard-bio/rshiny-in-nextflow/Dockerfile
+Aug-24 10:07:07.625 [Actor Thread 3] DEBUG nextflow.util.CacheHelper - Hash asset file sha-256: /home/suman/.nextflow/assets/lizard-bio/rshiny-in-nextflow/deploy.sh
+Aug-24 10:07:08.037 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-24 10:07:08.072 [Task submitter] INFO  nextflow.Session - [15/785e9f] Submitted process > RShiny
+Aug-24 10:08:21.570 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: RShiny; status: COMPLETED; exit: 0; error: -; workDir: /mnt/d/Ghent_University_notes/Internship/rshiny-in-nextflow/work/15/785e9fc91b509a6e5fcdf36406a937]
+Aug-24 10:08:22.255 [main] DEBUG nextflow.Session - Session await > all process finished
+Aug-24 10:08:22.348 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Aug-24 10:08:22.472 [main] INFO  nextflow.script.BaseScript - Execution status: App deployed at https://suman-muralidharan.shinyapps.io/rshiny-in-nextflow
+Aug-24 10:08:22.940 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=1; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=1m 11s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Aug-24 10:08:23.974 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Aug-24 10:08:24.389 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
